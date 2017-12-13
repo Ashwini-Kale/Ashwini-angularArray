@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  /*Create Array */
+  names=['Ashwini','Sush','Supriya','Govind','Sangram','Saumit','Kalip'];
+
+  numberArr=[];
+  constructor(){
+    for(let i=1;i<=10;i++){
+    this.numberArr.push(i);
+   }
+}
 }
