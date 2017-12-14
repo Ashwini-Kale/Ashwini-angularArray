@@ -1,0 +1,7 @@
+<h1 style="color:blueviolet">I Am user child</h1>
+<div  *ngFor = "let user of usersName">
+    <p>{{user.name}}'s Phone number is {{user.phonenumber}} 
+      <span *ngIf="user.address!='Pune'" >and he is from {{user.address}}</span>
+    </p>
+
+</div>

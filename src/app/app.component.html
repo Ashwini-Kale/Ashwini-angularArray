@@ -5,7 +5,8 @@
   </h1>
   </div>
   <div>
-    <!--Names veriable rom TS file ans name is my given variable name -->
+    <!--Names veriable for TS file ans name is my given variable name -->
+    <h1 style="color:gray">Names veriable for TS </h1>
     <ul *ngFor = "let name of names">
       <li>
         <!-- Syntax use to change text in uppercase -->
@@ -13,10 +14,47 @@
       </li>
 
     </ul>
+
+    <!--Number Array -->
+    <h1 style="color:Yellow">Number array </h1>
+    
     <ul *ngFor = "let num of numberArr">
         <li>
         {{num}}
         </li>
   
       </ul>
+<!--using Json show output -->
+<h1 style="color:Green">Using Json output is</h1>
+      <div *ngFor = "let user of users">
+          {{user|json}}
+           </div>
+    <!--using Json show output end --> 
+
+           <!-- Show output using for loop for users Array from ts file  -->
+              <h1 style="color:red">Loop Arrey output</h1>
+             <div *ngFor = "let user of users">
+              <p>{{user.name}}'s Phone number is {{user.phonenumber}}</p>
+          </div>
+          <!--End -->
+           <!-- Show output using for loop for users Array With Address condt  -->
+           <h1 style="color:orange">Address Cond</h1>
+           
+          <div  *ngFor = "let user of users">
+              <p>{{user.name}}'s Phone number is {{user.phonenumber}} 
+                <span *ngIf="user.address!='Pune'" >and he is from {{user.address}}</span>
+              </p>
+          </div>
+          <!--End -->
   </div>
+
+  <!-- User componet called -->
+<app-user-component></app-user-component>
+
+<!-- Show data in funny component 7 times because we use it with names array -->
+<h2 style="color:brown ">I am Funny component</h2>
+ <app-funny *ngFor="let name of names">
+  <H3>Hello  {{name}}</H3>
+
+ 
+</app-funny>
